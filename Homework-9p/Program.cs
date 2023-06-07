@@ -33,6 +33,10 @@
                         if (comand == "1") break;
 
                     }
+                    else
+                    {
+                        Console.WriteLine("Введите пожалуйста число!");
+                    }
                 }
             }
 

@@ -43,7 +43,6 @@ namespace Homework_9p
                     "***************************\n");
 
                 ret = PrintMenu();
-
             }
 
             return ret;
