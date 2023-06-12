@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Homework_9p
+namespace Homework_9p.Print
 {
     internal class PrintResultLess : IPrintRezult
     {

@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Homework_9p.Interfese;
+using Homework_9p.Print;
 
 namespace Homework_9p
 {
-    internal class CheckingNumber
+    internal class CheckingNumber : ICheckingNumber
     {
         PrintResultLess resultLess = new PrintResultLess();
         PrintResultMore resultMore = new PrintResultMore();
@@ -14,7 +16,7 @@ namespace Homework_9p
 
         int attempts = 0;
         string ret = string.Empty;
-        public string Check(int numberUser, RandomNumberGeneration numberGeneration )
+        public string Check(int numberUser, IRandomNumberGeneration numberGeneration )
         {
             //Подсчёт количества попыток
             attempts++;
@@ -35,7 +37,7 @@ namespace Homework_9p
             }
 
             //Проверка количества попыток
-            if (attempts >= numberGeneration.CountAttempts)
+            if (attempts >= Settings.CountAttempts)
             {
                 Console.WriteLine(
                     "***************************\n" +

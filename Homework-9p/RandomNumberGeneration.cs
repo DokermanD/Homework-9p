@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Homework_9p.Interfese;
 
 namespace Homework_9p
 {
-    internal class RandomNumberGeneration : Settings
+    internal class RandomNumberGeneration : IRandomNumberGeneration 
     {
         public int RandomNumber { get; set; }
 
@@ -14,7 +15,7 @@ namespace Homework_9p
 
         public void Generation()
         {
-            RandomNumber = random.Next(0, RangeOfNumbers);
+            RandomNumber = random.Next(0, Settings.RangeOfNumbers);
         }
     }
 }
