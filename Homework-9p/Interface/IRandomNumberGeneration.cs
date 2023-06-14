@@ -9,6 +9,6 @@ namespace Homework_9p.Interfese
     internal interface IRandomNumberGeneration
     {
         public int RandomNumber { get; set; }
-        public void Generation();
+        public void Generation(ISetting setting);
     }
 }

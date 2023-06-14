@@ -16,7 +16,7 @@ namespace Homework_9p
 
         int attempts = 0;
         string ret = string.Empty;
-        public string Check(int numberUser, IRandomNumberGeneration numberGeneration )
+        public string Check(int numberUser, IRandomNumberGeneration numberGeneration, ISetting setting)
         {
             //Подсчёт количества попыток
             attempts++;
@@ -37,7 +37,7 @@ namespace Homework_9p
             }
 
             //Проверка количества попыток
-            if (attempts >= Settings.CountAttempts)
+            if (attempts >= setting.CountAttempts)
             {
                 Console.WriteLine(
                     "***************************\n" +

@@ -8,6 +8,6 @@ namespace Homework_9p.Interfese
 {
     internal interface ICheckingNumber
     {
-        public string Check(int numberUser, IRandomNumberGeneration numberGeneration);
+        public string Check(int numberUser, IRandomNumberGeneration numberGeneration, ISetting setting);
     }
 }

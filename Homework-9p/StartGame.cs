@@ -10,17 +10,19 @@ namespace Homework_9p
             {
                 //Интерфейсы
                 ICheckingNumber checking = new CheckingNumber();
-                IRandomNumberGeneration numberGeneration = new RandomNumberGeneration();
+                //IRandomNumberGeneration numberGeneration = new RandomNumberGeneration();
+                IRandomNumberGeneration numberGeneration = new RandomNumberGenerationChet();
+                ISetting setting = new Settings();
 
                 //Генерация числа
-                numberGeneration.Generation();
+                numberGeneration.Generation(setting);
 
                 //Вывод правил
                 Console.WriteLine
                     (
                     $"\nПривет!\n" +
-                    $"Я загадал число от 0 до {Settings.RangeOfNumbers}\n" +
-                    $"У вас есть {Settings.CountAttempts} попыток.\n" +
+                    $"Я загадал число от 0 до {setting.RangeOfNumbers}\n" +
+                    $"У вас есть {setting.CountAttempts} попыток.\n" +
                     "Попробуйте угадать число.\n"
                     );
 
@@ -33,7 +35,7 @@ namespace Homework_9p
                     //Проверка что введено число
                     if (numberUser)
                     {
-                        var comand = checking.Check(result, numberGeneration);
+                        var comand = checking.Check(result, numberGeneration, setting);
 
                         if (comand == "1") break;
 

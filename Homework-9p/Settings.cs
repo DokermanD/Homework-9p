@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace Homework_9p
 {
-    internal static class Settings
+    internal class Settings : ISetting 
     {
-        public static int CountAttempts { get; } = 10; //Количество попыток
-        public static int RangeOfNumbers { get; } = 50; //Диапазон чисел
+        public  int CountAttempts { get; } = 10; //Количество попыток
+        public  int RangeOfNumbers { get; } = 50; //Диапазон чисел
 
     }
 }
